@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telas.AFDTela">
+   <top>
+      <AnchorPane id="AnchorPane" focusTraversable="true" prefHeight="128.0" prefWidth="865.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+          <children>
+            <Label layoutX="130.0" layoutY="36.0" prefHeight="17.0" prefWidth="317.0" text="UNIVERSIDADE FEDERAL DO TOCANTINS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="53.0" text="CURSO DE CIÊNCIA DA COMPUTAÇÃO">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="70.0" text="DISCIPLINA DE LINGUAGENS FORMAIS " />
+            <ImageView fitHeight="99.0" fitWidth="88.0" layoutX="40.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@BRASAO%20UFT.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="131.0" layoutY="87.0" text="TRABALHO 5" />
+          </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="506.0" prefWidth="865.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabelaEstados" layoutX="321.0" layoutY="120.0" onMouseClicked="#linhaSelecionada" onMouseEntered="#recarregarTabela" prefHeight="345.0" prefWidth="534.0">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#addEstadoFinal" text="Eh final" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></TableView>
+            <TextField fx:id="txtAlfabeto" layoutX="34.0" layoutY="78.0" prefHeight="26.0" prefWidth="264.0" />
+            <TextField fx:id="txtQuantEstados" layoutX="37.0" layoutY="290.0" prefHeight="26.0" prefWidth="266.0" />
+            <Label layoutX="33.0" layoutY="56.0" text="Informe um Alfabeto no formato: {x,y,z}" />
+            <Button layoutX="94.0" layoutY="118.0" mnemonicParsing="false" onAction="#addAlfabeto" text="Adicionar Alfabeto" />
+            <Label layoutX="38.0" layoutY="268.0" text="Informe a quantidade de estados" />
+            <Button layoutX="94.0" layoutY="333.0" mnemonicParsing="false" onAction="#addEstados" text="Adicionar Estados" />
+            <ComboBox fx:id="comboEstadoInicial" layoutX="38.0" layoutY="414.0" onAction="#estaoInicialSelecionado" prefHeight="26.0" prefWidth="89.0" />
+            <Label layoutX="37.0" layoutY="390.0" text="Estado Inicial:" />
+            <TextField fx:id="txtEntrada" layoutX="398.0" layoutY="35.0" prefHeight="26.0" prefWidth="399.0" />
+            <Label layoutX="397.0" layoutY="14.0" text="Entre com uma palavra:" />
+            <Button fx:id="btnReconhecer" layoutX="555.0" layoutY="65.0" mnemonicParsing="false" onAction="#reconhecerPalavra" text="Verificar" />
+            <Label fx:id="lblReconhecida" layoutX="397.0" layoutY="96.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAlfabeto" layoutX="28.0" layoutY="199.0" text="Alfabeto inserido:" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
