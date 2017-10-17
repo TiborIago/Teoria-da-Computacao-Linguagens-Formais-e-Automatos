@@ -1,0 +1,158 @@
+.background {
+    -fx-background-color: #CDCDCD;
+}
+
+.label {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: blueviolet;
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+
+.label-bright {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+.labelAviso{
+    
+    -fx-text-fill:#0000FF;
+}
+
+.label-header {
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+
+.table-view {
+    -fx-base: #A8A8A8;
+    -fx-control-inner-background: #A8A8A8;
+    -fx-background-color: #A8A8A8;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 6;
+}
+
+.list-view {
+    -fx-base: #A8A8A8;
+    -fx-control-inner-background: #A8A8A8;
+    -fx-background-color: #A8A8A8;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #C0D9D9;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent #A8A8A8 transparent #A8A8A8;
+    -fx-background-color: transparent, derive(#A8A8A8,20%);
+}
+
+.split-pane {
+    -fx-padding: 1 0 0 0;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#A8A8A8,20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#A8A8A8,50%);
+}
+
+.menu-bar .label {
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+    -fx-background-color: black;
+}
+
+.text-field {
+    -fx-font-family: "Segoe UI Semibold";
+    
+    -fx-base: #C0C0C0;
+    -fx-control-inner-background: #C0C0C0;
+    -fx-background-color: #C0C0C0;
+}
+
+.text-field:focused {
+    -fx-background-color: #C0D9D9;
+}
+
+/* 
+ * Metro style Push Button
+ * Author: Pedro Duque Vieira
+ * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/
+ */
+.button {
+    /*-fx-padding: 5 22 5 22;*/   
+    -fx-border-color: #A8A8A8;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #A8A8A8;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-text-fill: black;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #A8A8A8;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: #A8A8A8;
+  -fx-text-fill: black;
+}
+
+.button:focused {
+    -fx-border-color: black, black;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: black;
+    -fx-text-fill: black;
+}
+
+.button:default {
+    -fx-background-color: #A8A8A8;
+    -fx-text-fill: black;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(#C0D9D9,30%);
+}
